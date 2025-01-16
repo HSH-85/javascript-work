@@ -49,5 +49,26 @@ console.log('3보다 큰 수 : '+ values.filter((x) => x>3));
 
 //3보다 큰 수 찾아서 오름차순 정렬하기
 let array1 = values.filter((x)=>x>3);
-console.log('3보다 큰 수 오름차순 정렬 : '+(array1.sort((x,y) => {return x-y})))
+console.log('3보다 큰 수 오름차순 정렬 : '+(array1.sort((x,y) => x-y)))
 
+// 5.find()함수
+console.log('find() 함수로 값 찾기');
+console.log('장원영은 ' + iveMembers
+  .findIndex(x => x==='장원영')+ '번째');
+
+// 6. reduce()함수
+// p : previous(이전), next : 다음값, 초깃값
+// 문제 : 배열의 합
+
+let sumValue = values.reduce((x, y)=> (x + y));
+console.log(sumValue);
+
+// 문제 : 배열의 최대값
+
+let maxValue = values.reduce((x,y)=> Math.max(x,y));
+console.log(maxValue)
+
+// 문제 : 배열의 최소값
+
+let minValue = values.reduce((x,y)=> Math.min(x,y));
+console.log(minValue)
